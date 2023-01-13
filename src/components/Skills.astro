@@ -1,0 +1,39 @@
+---
+const mainSkills = [
+  "Python",
+  "REST API",
+  "MQTT",
+  "Microservices",
+  "IoT",
+  "Smart-Grid",
+];
+const otherSkills = [
+  "Javascript",
+  "Astro",
+  "Vue",
+  "HTML & CSS",
+  "MongoDB",
+  "Docker",
+  "Git",
+];
+---
+
+<article class="relative minimalist">
+  <h2>Technical skills</h2>
+  <h3>Main</h3>
+  <div class="flex flex-row justify-center gap-4">
+    {
+      mainSkills.map((skill) => (
+        <button class=" border-none bg-slate-500 text-slate-50 rounded-full w-36 h-6">{skill}</button>
+      ))
+    }
+  </div>
+  <h3>Others</h3>
+  <div class="flex flex-row justify-center gap-4">
+    {
+      otherSkills.map((skill) => (
+        <button class=" border-none bg-slate-500 text-slate-50 rounded-full w-36 h-6">{skill}</button>
+      ))
+    }
+  </div>
+</article>

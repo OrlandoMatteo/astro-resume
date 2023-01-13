@@ -1,7 +1,12 @@
 ---
-import '@fontsource/poppins';
-import Download from '../components/Download.astro';
-import '../styles.css';
+import "@fontsource/poppins";
+import Download from "../components/Download.astro";
+import Header  from "../components/Header.astro";
+import Career  from "../components/Career.astro";
+import Projects  from "../components/Projects.astro";
+import Skills  from "../components/Skills.astro";
+import Publications  from "../components/Publications.astro";
+import "../styles.css";
 
 export interface Props {
   title: string;
@@ -10,16 +15,10 @@ export interface Props {
 }
 
 const { title, pdfLink, noIndex } = Astro.props.frontmatter as Props;
-
-const initials = title
-  .split(' ')
-  .map((word) => word[0].toUpperCase())
-  .slice(0, 2)
-  .join(' ');
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="fantasy" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -28,26 +27,25 @@ const initials = title
     {noIndex && <meta name="robots" content="noindex" />}
     <title>{title}</title>
   </head>
-  <body class="bg-slate-50 dark:bg-slate-900 my-0 sm:my-14">
-    <div class="container flex justify-center mx-auto">
-      <article class="relative minimalist">
-        <div
-          class="absolute bg-indigo-400 px-4 py-1 top-4 sm:top-12 sm:left-8 rounded-sm"
-        >
-          <div class="w-2 h-fit text-sm font-bold select-none">
-            {initials}
+  <body class="my-0 sm:my-14">
+    <div class="container flex flex-col justify-center mx-auto">
+      <div class="absolute px-4 py-1 top-4 sm:top-12 sm:left-8 rounded-sm">
+      </div>
+      {
+        pdfLink && (
+          <div class="not-prose absolute right-4 top-4">
+            <Download href={pdfLink} />
           </div>
-        </div>
-        {
-          pdfLink && (
-            <div class="not-prose absolute right-4 top-4">
-              <Download href={pdfLink} />
-            </div>
-          )
-        }
-        <slot />
-      </article>
+        )
+      }
+        <article class="relative minimalist">
+      <Header/>
+          <slot />
+        </article>
+      <Career class="relative minimalist"/>
+      <Projects class="relative minimalist"/>
+      <Skills class="relative minimalist"/>
+      <Publications class="relative minimalist"/>
     </div>
-    <style></style>
   </body>
 </html>
