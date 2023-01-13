@@ -7,10 +7,11 @@ import { papers } from "../publications.json";
   {
     papers.map((paper) => (
       <p>
-        <h3>{paper.title}</h3>
-        <b>Published in {paper.location}</b>
+        <strong>{paper.title}</strong>
   <br>
-        <a href={paper.href}>Read the full paper</a>
+  <br>
+        <b>Published in {paper.location}</b>
+           <a href={paper.href}>Read the full paper</a>
       </p>
   <hr>
     ))
