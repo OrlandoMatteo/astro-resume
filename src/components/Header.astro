@@ -2,23 +2,27 @@
 import avatar from "/avatar.jpg";
 ---
 
-<div class="grid grid-cols-2 p-2 xs:grid-cols-1">
+<div class="grid grid-cols-1 p-2 lg:grid-cols-2">
   <div class="col-span-1">
     <img src={avatar} class="avatar mx-0 rounded-full w-48" />
   </div>
-  <div class="col-span-1 md:grid-cols-1">
+  <div class="col-span-1">
     <h1>Matteo Orlando</h1>
-    <ul style="list-style:none">
     <li>Trofarello, TO, Italia</li>
-    <li><a href="mailto:matteo.orlando.1993@gmail.com">matteo.orlando.1993@gmail.com</a></li> 
+    <li>
+      <a href="mailto:matteo.orlando.1993@gmail.com"
+        >matteo.orlando.1993@gmail.com</a>
+    </li>
     <li><a href="matteodev.netlify.app">matteodev.netlify.app</a></li>
-      </ul>
   </div>
 </div>
 
 <style>
-.avatar {
-  margin-top: 0em!important;
-  margin-bottom: 0em!important;
-}
+  .avatar {
+    margin-top: 0em !important;
+    margin-bottom: 0em !important;
+  }
+  li {
+    list-style: none;
+  }
 </style>

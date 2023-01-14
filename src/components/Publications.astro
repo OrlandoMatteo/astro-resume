@@ -2,18 +2,15 @@
 import { papers } from "../publications.json";
 ---
 
-<article class="relative minimalist">
   <h2>Publications</h2>
   {
     papers.map((paper) => (
       <p>
-        <strong>{paper.title}</strong>
-  <br>
-  <br>
+        <h3>{paper.title}</h3>
         <b>Published in {paper.location}</b>
+<br>
            <a href={paper.href}>Read the full paper</a>
       </p>
   <hr>
     ))
   }
-</article>
