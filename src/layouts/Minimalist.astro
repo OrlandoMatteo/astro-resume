@@ -12,9 +12,10 @@ export interface Props {
   title: string;
   pdfLink?: string;
   noIndex?: boolean;
+  show:Boolean;
 }
 
-const { title, pdfLink, noIndex } = Astro.props.frontmatter as Props;
+const { title, pdfLink, noIndex,show } = Astro.props.frontmatter as Props;
 
 const initials = title
   .split(' ')
@@ -50,12 +51,12 @@ const initials = title
             </div>
           )
         }
-        <Header />
+        <Header show={show}/>
         <slot />
-        <Career />
-        <Projects />
-        <Publications />
-        <Skills />
+        <Career show={show}/>
+        <Projects show={show}/>
+        <Publications show={show}/>
+        <Skills show={show}/>
       </article>
     </div>
     <style></style>

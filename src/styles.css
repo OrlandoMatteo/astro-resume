@@ -17,8 +17,8 @@ body {
   @apply prose prose-slate dark:prose-invert
     bg-white dark:bg-slate-800 px-12 py-8 pt-20 sm:px-24 sm:py-14 max-w-fit lg:max-w-4xl m-0 sm:shadow-md
     prose-h1:uppercase prose-h1:text-3xl
-    prose-h2:uppercase prose-h2:text-slate-500 prose-h2:text-2xl prose-h2:mb-3 prose-h2:mt-8 
-    prose-h3:uppercase prose-h3:mb-3 prose-h3:mt-3 prose-h3:text-xl
+    prose-h2:uppercase prose-h2:text-white prose-h2:text-3xl prose-h2:mb-2 prose-h2:mt-6 prose-h2:bg-indigo-400 prose-h2:p-1 prose-h2:rounded-md
+    prose-h3:uppercase prose-h3:mb-2 prose-h3:mt-2 prose-h3:text-xl
     prose-h4:mb-3 prose-h4:mt-4 prose-h4:text-sm prose-h4:text-slate-600 prose-h4:dark:text-slate-400 prose-h4:text-center
     prose-a:no-underline prose-a:font-bold hover:prose-a:text-slate-400 prose-a:transition-colors
     prose-p:my-2 prose-p:text-lg
@@ -26,6 +26,7 @@ body {
     prose-table:mt-4
     prose-thead:border-0  
     prose-th:font-medium prose-th:p-0
-    prose-hr:mb-1
+    prose-hr:mb-1 prose-hr:mt-1
+    prose-hr:border-indigo-500/75
     prose-td:text-slate-500 prose-td:p-0;
 }

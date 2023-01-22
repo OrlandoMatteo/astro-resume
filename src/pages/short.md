@@ -2,7 +2,7 @@
 title: Matteo Orlando - Resume
 layout: ../layouts/Minimalist.astro
 pdfLink: resume.pdf
-show: true
+show: false
 ---
 
 

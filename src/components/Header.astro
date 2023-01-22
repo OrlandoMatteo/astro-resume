@@ -1,21 +1,47 @@
 ---
 import avatar from "/avatar.jpg";
+const { show = true } = Astro.props;
 ---
 
-<div class="grid grid-cols-1 p-2 lg:grid-cols-2">
-  <div class="col-span-1">
-    <img src={avatar} class="avatar mx-0 rounded-full w-48" />
-  </div>
-  <div class="col-span-1">
-    <h1>Matteo Orlando</h1>
-    <li>Trofarello, TO, Italia</li>
-    <li>
-      <a href="mailto:matteo.orlando.1993@gmail.com"
-        >matteo.orlando.1993@gmail.com</a>
-    </li>
-    <li><a href="matteodev.netlify.app">matteodev.netlify.app</a></li>
-  </div>
-</div>
+{
+  show ? (
+    <div class="flex flex-row flex-wrap ">
+      <div class="w-full lg:w-1/2">
+        <img src={avatar} class="avatar mx-0 rounded-full w-48" />
+      </div>
+      <div class="w-full lg:w-1/2">
+        <h1>Matteo Orlando</h1>
+        <li>Trofarello, TO, Italia</li>
+        <li>
+          <a href="mailto:matteo.orlando.1993@gmail.com">
+            matteo.orlando.1993@gmail.com
+          </a>
+        </li>
+        <li>
+          <a href="matteodev.netlify.app">matteodev.netlify.app</a>
+        </li>
+      </div>
+    </div>
+  ) : (
+    <div class="flex flex-row flex-wrap ">
+      <div class="w-1/2">
+        <img src={avatar} class="avatar mx-0 rounded-full w-48" />
+      </div>
+      <div class="w-1/2">
+        <h1>Matteo Orlando</h1>
+        <li>Trofarello, TO, Italia</li>
+        <li>
+          <a href="mailto:matteo.orlando.1993@gmail.com">
+            matteo.orlando.1993@gmail.com
+          </a>
+        </li>
+        <li>
+          <a href="matteodev.netlify.app">matteodev.netlify.app</a>
+        </li>
+      </div>
+    </div>
+  )
+}
 
 <style>
   .avatar {
